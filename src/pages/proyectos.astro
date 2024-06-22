@@ -1,0 +1,47 @@
+---
+import Proyecto from '@components/ui/proyecto.astro';
+import Cta from '@components/cta.astro';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+---
+
+<Layout
+  title='Proyectos'
+  description='Descubre los proyectos destacados de Faedo Digital. Conoce cómo ayudamos a empresas rurales a crecer mediante soluciones digitales innovadoras y personalizadas.'>
+  <Container>
+    <Sectionhead>
+      <Fragment slot='title'>Proyectos</Fragment>
+      <Fragment slot='desc'
+        >Desde 2022 hemos creado algunos proyectos enfocados a dinamizar el
+        entorno rural.</Fragment
+      >
+    </Sectionhead>
+
+    <Proyecto
+      title='Ayto. Pola de Gordón'
+      description='Con el fín de dinamizar la comunicación del Ayuntamiento de Pola de Gordón, creamos una página web que reflejara la esencia de la localidad. Además, desarrollamos un sistema de publicación sencillo que facilita su actualización.'
+      image='/ayto-pola.png'
+      features={[
+        'Diseño y programación de página web',
+        'Sistemas de gestión de Contenidos',
+        'Posicionamiento SEO',
+      ]}
+      url='https://ayto-lapoladegordon.es/'
+    />
+
+    <Proyecto
+      title='Alojamiento Cuatro Estaciones'
+      description='Tuvimos la oportunidad de trabajar con Alojamiento Cuatro Estaciones. Necesitaban presentacia en internet y un sistema de reservas conectado a Booking. Les ayudamos a posicionarse como un alojamiento rural de calidad enfocado a la nueva Zona Alfa de León.'
+      image='/cuatro-estaciones.png'
+      features={[
+        'Diseño y programación de página web',
+        'Sistemas de reservas conectado a Booking',
+        'Posicionamiento SEO',
+      ]}
+      url='https://alojamientocuatroestaciones.com/'
+    />
+
+    <Cta />
+  </Container>
+</Layout>

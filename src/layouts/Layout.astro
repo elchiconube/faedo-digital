@@ -1,70 +1,88 @@
 ---
-import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
-import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource-variable/inter/index.css";
+import { SEO } from 'astro-seo';
+import Footer from '@components/footer.astro';
+import Header from '@components/header.astro';
+import '@fontsource-variable/inter/index.css';
 import '@fontsource-variable/bricolage-grotesque';
-
-
 
 export interface Props {
   title: string;
+  description: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  '/opengraph.jpg',
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + ' | ' + 'Faedo Digital'
+  : 'Faedo Digital | Soluciones Digitales para el Entorno Rural';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang='es'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description={description ||
+        'Descubre Faedo Digital, una empresa de soluciones digitales especializada en ayudar a negocios rurales del Alto Bernesga. Ofrecemos servicios de creación de páginas web, gestión de redes sociales, sistemas de reservas y más.'}
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
+        creator: '@elchiconube',
+        site: '@faedodigital',
+        card: 'summary_large_image',
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          type: 'website',
+          title: `Faedo Digital - Soluciones Digitales para el Entorno Rural`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: 'Faedo Digital Homepage Screenshot',
         },
       }}
     />
   </head>
   <body>
-    <Navbar />
-    <slot />
+    <Header />
+    <main>
+      <slot />
+    </main>
     <Footer />
     <style is:global>
+      :root {
+        --color-primary: #059669;
+      }
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
+      }
+
+      .underlined {
+        background-image: linear-gradient(
+          transparent calc(100% - 0.15em),
+          var(--color-primary) 0.15em
+        );
+        background-position: left bottom 0.03em;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: inline;
+        font-weight: inherit;
+        transition: background-size 0.6s cubic-bezier(0.45, 0, 0.55, 1);
       }
     </style>
   </body>

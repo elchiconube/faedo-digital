@@ -1,0 +1,125 @@
+---
+import Link from '@components/ui/link.astro';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+---
+
+<Layout
+  title='Sobre nosotros'
+  description='Conoce al equipo de Faedo Digital. Somos Óscar Bustos y María Cañizares, expertos en desarrollo web y gestión de proyectos, dedicados a ofrecer soluciones digitales innovadoras para empresas en entorno rural.'>
+  <Container>
+    <Sectionhead>
+      <Fragment slot='title'>Sobre nosotros</Fragment>
+      <Fragment slot='desc'>Un apasionado equipo de dos.</Fragment>
+    </Sectionhead>
+
+    <div class='flex flex-col gap-3 mx-auto max-w-4xl mt-16'>
+      <h2 class='font-bold text-3xl text-gray-800'>
+        El equipo que hará realidad <span class='underlined'>tu proyecto</span>
+      </h2>
+      <p class='text-lg leading-relaxed text-slate-500'>
+        Somos Óscar Bustos y María Cañizares, vivimos en Ciñera y somos
+        especialistas en desarrollo web y gestión de proyectos, dedicados a
+        ofrecer soluciones digitales innovadoras para empresas en entorno rural.
+        Entre los dos sumamos más de 20 años de experiencia en el sector.
+      </p>
+      <p class='text-lg leading-relaxed text-slate-500'>
+        Nos hemos especializado en el desarrollo de proyectos digitales en
+        entornos rurales porque creemos que es un sector con un gran potencial
+        de crecimiento y que necesita soluciones digitales adaptadas a sus
+        necesidades.
+      </p>
+    </div>
+
+    <section
+      class='relative scroll-mt-14 pb-3 pt-8 sm:scroll-mt-32 sm:pb-16 sm:pt-10 lg:pt-16'>
+      <div class='relative mx-auto max-w-5xl pt-16 sm:px-6'>
+        <div class='bg-slate-50 pt-px sm:rounded-6xl'>
+          <div
+            class='relative mx-auto -mt-16 h-44 w-44 overflow-hidden rounded-full bg-slate-200 md:float-right md:h-64 md:w-64 md:[shape-outside:circle(40%)] lg:mr-20 lg:h-72 lg:w-72'>
+            <img
+              alt='Maria Cañizares'
+              loading='lazy'
+              width='576'
+              height='576'
+              class='absolute inset-0 h-full w-full object-cover'
+              src='/maria-canizares.jpg'
+            />
+          </div><div
+            class='px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-32'>
+            <p
+              class='mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl'>
+              <span class='block text-emerald-600'>Maria Cañizares</span> Me encargo
+              de la gestión y la comunicación.
+            </p><p class='mt-4 text-lg tracking-tight text-slate-500'>
+              Desde 2010,he trabajado en proyectos digitales de todo tipo y he
+              gestionado equipos de desarrollo. Me apasiona la naturaleza.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class='relative scroll-mt-14 pb-3 pt-8 sm:scroll-mt-32 sm:pb-16 sm:pt-10 lg:pt-16'>
+      <div
+        class='absolute inset-x-0 bottom-0 top-1/2 text-slate-900/10 [mask-image:linear-gradient(transparent,white)]'>
+        <svg aria-hidden='true' class='absolute inset-0 h-full w-full'
+          ><defs
+            ><pattern
+              id=':S6:'
+              width='128'
+              height='128'
+              patternUnits='userSpaceOnUse'
+              x='50%'
+              y='100%'
+              ><path d='M0 128V.5H128' fill='none' stroke='currentColor'
+              ></path></pattern
+            ></defs
+          ><rect width='100%' height='100%' fill='url(#:S6:)'></rect></svg
+        >
+      </div><div class='relative mx-auto max-w-5xl pt-16 sm:px-6'>
+        <div class='bg-slate-50 pt-px sm:rounded-6xl'>
+          <div
+            class='relative mx-auto -mt-16 h-44 w-44 overflow-hidden rounded-full bg-slate-200 md:float-right md:h-64 md:w-64 md:[shape-outside:circle(40%)] lg:mr-20 lg:h-72 lg:w-72'>
+            <img
+              alt='Óscar Bustos'
+              loading='lazy'
+              width='576'
+              height='576'
+              class='absolute inset-0 h-full w-full object-cover'
+              src='/oscar-bustos.jpg'
+            />
+          </div><div
+            class='px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-32'>
+            <p
+              class='mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl'>
+              <span class='block text-emerald-600'>Óscar Bustos</span> Me encargo
+              del diseño y de la programación.
+            </p><p class='mt-4 text-lg tracking-tight text-slate-500'>
+              Desde 2011, he trabajado en proyectos digitales, tanto a nivel
+              nacional como internacional. Me encanta la programación y el
+              diseño web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class='flex flex-col gap-3 mx-auto max-w-4xl mt-16'>
+      <h2 class='font-bold text-3xl text-gray-800'>
+        Creemos que podemos <span class='underlined'>ayudarte</span>
+      </h2>
+      <p class='text-lg leading-relaxed text-slate-500'>
+        Nos gusta enfocarnos en conseguir objetivos concretos y aplicar las
+        tecnologías adecuadas para conseguirlo. Creemos que la tecnología es una
+        herramienta que puede ayudar a crecer el tejido empresarial en entornos
+        rurales y queremos ser parte de ese cambio.
+      </p>
+    </div>
+    <div class='mx-auto max-w-4xl mt-8'>
+      <Link href='/contacto'> Contacta con nostros </Link>
+    </div>
+  </Container>
+</Layout>

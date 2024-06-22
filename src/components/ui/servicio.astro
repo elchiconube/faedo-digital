@@ -1,0 +1,21 @@
+---
+import Link from '@components/ui/link.astro';
+const { title, description } = Astro.props;
+---
+
+<div class='grid place-items-center'>
+  <div class='max-w-lg'>
+    <h3 class='text-3xl font-medium mt-4 [text-wrap:balance]'>
+      {title}
+    </h3>
+    <p class='mt-4 text-slate-500 [text-wrap:balance]'>
+      {description}
+    </p>
+
+    <div class='flex items-center gap-4 mt-6'>
+      <Link href='/contacto' class='flex gap-1 items-center justify-center'>
+        Contacta con nostros
+      </Link>
+    </div>
+  </div>
+</div>

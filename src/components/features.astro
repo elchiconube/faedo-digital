@@ -1,69 +1,68 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
-
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: 'Creación de Páginas Web',
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      'Diseñamos y desarrollamos sitios web a medida, optimizados para ofrecer la mejor experiencia de usuario.',
+    icon: '🌐',
   },
   {
-    title: "100% Static HTML, No JS",
+    title: 'Sistemas de Reservas',
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      'Implementamos sistemas de reservas para restaurantes y hoteles, facilitando la gestión y la comodidad de los clientes.',
+    icon: '📅',
   },
   {
-    title: "On-Demand Components",
+    title: 'Tiendas Online',
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      'Desarrollamos tiendas online para la venta de productos elaborados, integrando soluciones de pago seguras y eficientes',
+    icon: '🛒',
   },
   {
-    title: "Broad Integration",
+    title: 'Posicionamiento en Buscadores (SEO)',
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      'Mejoramos el posicionamiento de tu web en los motores de búsqueda para aumentar el tráfico y las conversiones',
+    icon: '🔍',
   },
   {
-    title: "SEO Enabled",
+    title: 'Gestión de Redes Sociales',
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      'Te ayudamos a crear y gestionar perfiles en redes sociales como por ejemplo Facebook e Instagram para aumentar la visibilidad de tu empresa.',
+    icon: '📱',
   },
   {
-    title: "Community",
+    title: 'Consultoría y Formación',
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      'Ofrecemos servicios de consultoría y formación para que puedas gestionar tu web y tus redes sociales de forma autónoma',
+    icon: '📚',
   },
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+<section class='mt-16 md:mt-0'>
+  <h2
+    class='text-4xl lg:text-5xl font-bold lg:tracking-tight text-center md:text-left'>
+    Ofrecemos los servicios que <span class='underlined'>necesitas</span>
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+  <p class='text-lg mt-4 text-slate-600'>
+    Nos adaptamos a tus necesidades para ofrecerte un servicio personalizado y
+    de calidad. Nuestra misión es ayudarte a alcanzar tus objetivos y a hacer
+    crecer tu negocio.
   </p>
-</div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+  <div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16'>
+    {
+      features.map((item) => (
+        <div class='flex gap-4 items-start'>
+          <div class='w-8 h-8 text-3xl'>{item.icon}</div>
+          <div>
+            <h3 class='font-semibold text-lg'>{item.title}</h3>{' '}
+            <p class='text-slate-500 mt-2 leading-relaxed'>
+              {item.description}
+            </p>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
-</div>
+      ))
+    }
+  </div>
+</section>

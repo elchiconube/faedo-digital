@@ -1,0 +1,69 @@
+---
+import Link from '@components/ui/link.astro';
+
+const testimonials = [
+  {
+    quote:
+      'Nos propusieron una solución a medida y se adaptaron a nuestras necesidades. Además el trato fue excelente durante todo el proceso.',
+    person: 'Antonio Littel',
+    role: 'Frontend Developer',
+  },
+  {
+    quote:
+      'Nos propusieron una solución a medida y se adaptaron a nuestras necesidades. Además el trato fue excelente durante todo el proceso.',
+    person: 'Antonio Littel',
+    role: 'Frontend Developer',
+  },
+  {
+    quote:
+      'Nos propusieron una solución a medida y se adaptaron a nuestras necesidades. Además el trato fue excelente durante todo el proceso.',
+    person: 'Antonio Littel',
+    role: 'Frontend Developer',
+  },
+];
+---
+
+<section class='py-8 sm:py-10 lg:py-16'>
+  <div
+    class='mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-4xl lg:px-12 text-center'>
+    <h2 class='text-4xl lg:text-5xl font-bold'>
+      Algunas opiniones de <span class='underlined'>nuestros clientes</span>
+    </h2>
+    <p class='mt-4 text-lg tracking-tight text-slate-600'>
+      Estas son algunas de las opiniones de nuestros clientes que han confiado
+      en nosotros.
+    </p>
+  </div>
+  <div class='group mt-16'>
+    <ul
+      role='list'
+      class='mx-auto grid max-w-2xl grid-cols-1 gap-8 px-4 lg:max-w-7xl lg:grid-cols-3 lg:px-8'>
+      {
+        testimonials.map((item) => (
+          <li>
+            <article class='rounded-2xl p-8 shadow-md ring-1 ring-slate-900/5'>
+              <blockquote>
+                <p class="text-lg tracking-tight text-slate-900 before:content-['“'] after:content-['”']">
+                  {item.quote}
+                </p>
+              </blockquote>
+
+              <figcaption class='mt-2 text-sm text-slate-500'>
+                <strong class="font-semibold text-emerald-600 before:content-['—_']">
+                  {' '}
+                  {item.person}
+                </strong>
+                , {item.role}
+              </figcaption>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+    <div class='mt-10 flex justify-center'>
+      <Link href='/contacto' class='flex gap-1 items-center justify-center'>
+        Contacta con nostros
+      </Link>
+    </div>
+  </div>
+</section>

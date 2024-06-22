@@ -1,0 +1,57 @@
+---
+import Link from '@components/ui/link.astro';
+
+const { title, description, image, features, url } = Astro.props;
+---
+
+<div class='grid sm:grid-cols-2 gap-10 mx-auto mt-24'>
+  <div class='relative'>
+    <div
+      class='absolute hidden md:block w-44 h-44 bg-emerald-100 rounded-full left-10 top-1/4 -z-10'>
+    </div>
+    <figure class='rounded-xl p-8 bg-gray-50 border-2 border-slate-200'>
+      <img src={image} alt={title} class='rounded-xl shadow-xl' />
+    </figure>
+  </div>
+  <div class='place-self-center'>
+    <h2 class='text-4xl text-gray-800 font-medium tracking-tight -mt-2'>
+      {title}
+    </h2>
+    <p class='text-lg max-w-xl mt-4 leading-relaxed text-slate-500'>
+      {description}
+    </p>
+    <ul class='grid mt-6 text-left gap-y-4'>
+      {
+        features.map((feature) => (
+          <li class='flex items-center gap-3 text-slate-800'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='w-6 h-6 text-emerald-500'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'>
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M5 13l4 4L19 7'
+              />
+            </svg>
+            <span class='text-slate-600'>{feature}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class='flex items-center gap-4 mt-6'>
+      <Link
+        href={url}
+        target='_blank'
+        rel='noopener noreferrer'
+        style='outline'
+        class='flex gap-1 items-center justify-center'>
+        Visitar proyecto
+      </Link>
+    </div>
+  </div>
+</div>

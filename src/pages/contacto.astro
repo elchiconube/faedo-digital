@@ -1,0 +1,45 @@
+---
+import Contactform from '@components/contactform.astro';
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout
+  title='Contacto'
+  description='Ponte en contacto con Faedo Digital para más información sobre nuestros servicios. Estamos aquí para ayudarte a impulsar tu negocio rural con soluciones digitales innovadoras.'>
+  <Container>
+    <Sectionhead>
+      <Fragment slot='title'>Contacto</Fragment>
+      <Fragment slot='desc'>Escríbenos y te contestaremos</Fragment>
+    </Sectionhead>
+
+    <div class='grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16'>
+      <div>
+        <h2 class='font-medium text-2xl text-gray-800'>Datos de contacto</h2>
+        <p class='text-lg leading-relaxed text-slate-500 mt-3'>
+          Si lo prefieres puedes contactarnos directamente por teléfono o correo
+          electrónico. Estamos muy cerca de ti.
+        </p>
+        <div class='mt-5'>
+          <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:map-marker' />
+            <span>24660, Ciñera (León)</span>
+          </div><div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:envelope' /><a
+              href='mailto:hola@faedodigital.com'>hola@faedodigital.com</a
+            >
+          </div><div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:phone' /><a
+              href='tel:+34649131791'>+34 649 131 791</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>
