@@ -7,7 +7,7 @@ image:
     src: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?&fit=crop&w=430&h=240",
     alt: "proceso de desarrollo web",
   }
-publishDate: "2024-06-22 12:00"
+publishDate: "2024-06-19 12:00"
 category: "Desarrollo"
 author: "Óscar Bustos"
 tags: [desarrollo web, proyectos digitales, faedo digital]

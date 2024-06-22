@@ -7,7 +7,7 @@ image:
     src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?&fit=crop&w=430&h=240",
     alt: "Instagram en un entorno rural",
   }
-publishDate: "2024-06-22 16:00"
+publishDate: "2024-06-21 16:00"
 category: "Redes Sociales"
 author: "Óscar Bustos"
 tags: [Instagram, marketing digital, entorno rural, faedo digital]

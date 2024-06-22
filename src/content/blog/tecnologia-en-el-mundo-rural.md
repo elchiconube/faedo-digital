@@ -7,7 +7,7 @@ image:
     src: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?&fit=crop&w=430&h=240",
     alt: "tecnología en el entorno rural",
   }
-publishDate: "2024-06-22 14:00"
+publishDate: "2024-06-20 14:00"
 category: "Tecnología"
 author: "María Cañizares"
 tags: [tecnología, economía rural, faedo digital]
