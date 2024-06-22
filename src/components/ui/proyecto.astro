@@ -6,9 +6,6 @@ const { title, description, image, features, url } = Astro.props;
 
 <div class='grid sm:grid-cols-2 gap-10 mx-auto mt-24'>
   <div class='relative'>
-    <div
-      class='absolute hidden md:block w-44 h-44 bg-emerald-100 rounded-full left-10 top-1/4 -z-10'>
-    </div>
     <figure class='rounded-xl p-8 bg-gray-50 border-2 border-slate-200'>
       <img src={image} alt={title} class='rounded-xl shadow-xl' />
     </figure>

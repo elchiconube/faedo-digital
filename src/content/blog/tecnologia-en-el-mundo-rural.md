@@ -4,13 +4,13 @@ title: "Cómo la Tecnología Puede Dinamizar la Economía Rural"
 snippet: "Descubre cómo la tecnología puede impulsar el eco turismo, la producción local y otros aspectos de la economía en una antigua zona minera transformada en una reserva de la biosfera."
 image:
   {
-    src: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1566596829937-261552435b06?q=80&w=450&h=240&auto=format&fit=crop",
     alt: "tecnología en el entorno rural",
   }
 publishDate: "2024-06-20 14:00"
 category: "Tecnología"
 author: "María Cañizares"
-tags: [tecnología, economía rural, faedo digital]
+tags: [tecnologia, economia, rural]
 ---
 
 En Faedo Digital, creemos firmemente que la tecnología puede ser un motor clave para dinamizar la economía en entornos rurales. Este artículo se centra en una antigua zona minera que ahora está transformándose en un lugar de eco turismo y producción local. Aquí exploramos cómo las herramientas digitales pueden apoyar esta transición y fomentar un desarrollo sostenible.

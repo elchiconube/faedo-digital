@@ -4,7 +4,7 @@ title: "El Proceso de Desarrollo de un Proyecto Digital"
 snippet: "Descubre cómo el proceso de desarrollo de una página web puede ser sencillo y accesible, incluso si no tienes conocimientos técnicos."
 image:
   {
-    src: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=450&h=240&auto=format&fit=crop",
     alt: "proceso de desarrollo web",
   }
 publishDate: "2024-06-19 12:00"

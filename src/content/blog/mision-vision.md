@@ -4,7 +4,7 @@ title: "Nuestra Misión y Visión en Faedo Digital"
 snippet: "Conoce la misión y visión de Faedo Digital, una empresa dedicada a proporcionar soluciones digitales innovadoras para el entorno rural, liderada por Óscar Bustos y María Cañizares."
 image:
   {
-    src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1484627147104-f5197bcd6651?q=80&w=450&h=240&auto=format&fit=crop",
     alt: "misión y visión de Faedo Digital",
   }
 publishDate: "2024-06-18 18:00"

@@ -4,13 +4,13 @@ title: "Cómo Instagram Puede Ayudar a Posicionar un Bar en un Entorno Rural"
 snippet: "Descubre cómo una cuenta de Instagram bien gestionada puede aumentar la visibilidad y atraer más clientes a tu bar en una zona rural."
 image:
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=450&h=240&auto=format&fit=crop",
     alt: "Instagram en un entorno rural",
   }
 publishDate: "2024-06-21 16:00"
 category: "Redes Sociales"
 author: "Óscar Bustos"
-tags: [Instagram, marketing digital, entorno rural, faedo digital]
+tags: [instagram, marketing, social-media]
 ---
 
 En un entorno rural, destacar y atraer a nuevos clientes puede ser un desafío. Sin embargo, las redes sociales, y en particular Instagram, pueden ser una herramienta poderosa para mejorar la visibilidad de tu negocio. En este artículo, exploramos cómo una cuenta de Instagram bien gestionada puede ayudar a posicionar un bar en una zona rural.
