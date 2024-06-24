@@ -1,5 +1,5 @@
 ---
-import Link from '@components/ui/link.astro';
+import Cta from '@components/cta.astro';
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/container.astro';
 import Sectionhead from '@components/sectionhead.astro';
@@ -106,20 +106,6 @@ import Sectionhead from '@components/sectionhead.astro';
         </div>
       </div>
     </section>
-
-    <div class='flex flex-col gap-3 mx-auto max-w-4xl mt-16'>
-      <h2 class='font-bold text-3xl text-gray-800'>
-        Creemos que podemos <span class='underlined'>ayudarte</span>
-      </h2>
-      <p class='text-lg leading-relaxed text-slate-500'>
-        Nos gusta enfocarnos en conseguir objetivos concretos y aplicar las
-        tecnologías adecuadas para conseguirlo. Creemos que la tecnología es una
-        herramienta que puede ayudar a crecer el tejido empresarial en entornos
-        rurales y queremos ser parte de ese cambio.
-      </p>
-    </div>
-    <div class='mx-auto max-w-4xl mt-8'>
-      <Link href='/contacto'> Contacta con nostros </Link>
-    </div>
+    <Cta />
   </Container>
 </Layout>
