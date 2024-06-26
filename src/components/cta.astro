@@ -10,10 +10,8 @@ import Link from './ui/link.astro';
   <p class='text-white mt-4 text-lg md:text-xl'>
     ¿Tienes alguna pregunta? ¿Quieres saber más sobre nuestros servicios?
   </p>
-  <p class='text-white mt-4 text-lg md:text-xl'>  
-    Contacta con nosotros.
-  </p>
-  <div class='flex mt-5'>
+  <p class='text-white mt-4 text-lg md:text-xl'>Contacta con nosotros.</p>
+  <div class='flex mt-5 cta'>
     <Link href='/contacto' style='inverted'>Contacto</Link>
   </div>
 </div>
@@ -21,6 +19,7 @@ import Link from './ui/link.astro';
 <style>
   .cta-section {
     position: relative;
+
     &::before {
       background-image: url('/lines-light.svg');
       background-size: cover;
@@ -35,5 +34,10 @@ import Link from './ui/link.astro';
       height: 100%;
       opacity: 0.4;
     }
+  }
+
+  .cta {
+    position: relative;
+    z-index: 2;
   }
 </style>
