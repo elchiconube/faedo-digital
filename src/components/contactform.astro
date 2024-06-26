@@ -12,9 +12,10 @@ import Button from './ui/button.astro';
   novalidate>
   <input
     type='hidden'
-    name='access_key'
+    name='apikey'
     value='3b8856b3-9c81-4c86-8b80-8d69550c5d6b'
   />
+
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type='checkbox' class='hidden' style='display:none' name='botcheck' />
   <div class='mb-5'>
@@ -56,6 +57,7 @@ import Button from './ui/button.astro';
       Por favor escríbenos un mensaje.
     </div>
   </div>
+  <input type='hidden' name='redirect' value='/success' />
   <Button type='submit' size='lg' block>Enviar</Button>
   <div id='result' class='mt-3 text-center'></div>
 </form>
@@ -95,7 +97,7 @@ import Button from './ui/button.astro';
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = 'Sending...';
+    result.innerHTML = 'Enviando...';
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -118,7 +120,7 @@ import Button from './ui/button.astro';
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = 'Something went wrong!';
+        result.innerHTML = 'Algo ha salido mal!';
       })
       .then(function () {
         form.reset();
