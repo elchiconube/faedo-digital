@@ -22,8 +22,6 @@ const { title, description } = Astro.props;
 const makeTitle = title
   ? title + ' | ' + 'Faedo Digital'
   : 'Faedo Digital | Soluciones Digitales para el Entorno Rural';
-
-const isPro = import.meta.env.MODE === 'production';
 ---
 
 <!doctype html>
@@ -34,7 +32,7 @@ const isPro = import.meta.env.MODE === 'production';
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     {
-      isPro && (
+      import.meta.env.PROD && (
         <script
           defer
           src='https://cloud.umami.is/script.js'
