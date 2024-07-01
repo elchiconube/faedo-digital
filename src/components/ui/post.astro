@@ -1,0 +1,41 @@
+---
+import { Picture } from 'astro:assets';
+import { getFormattedDate } from '@utils/all.js';
+
+const { post, slug } = Astro.props;
+---
+
+<a href={`/blog/${slug}`}>
+  <article class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
+    <Picture
+      src={post.image.src}
+      alt={post.image.alt}
+      sizes='(max-width: 800px) 100vw, 800px'
+      width={800}
+      height={600}
+      loading='lazy'
+      decoding='async'
+      class='w-full rounded-md object-cover object-center bg-white shadow-lg'
+    />
+    <div>
+      <span
+        class='text-emerald-400 uppercase tracking-wider text-sm font-medium'>
+        {post.category}
+      </span>
+
+      <h2 class='text-3xl font-semibold leading-snug tracking-tight mt-1'>
+        {post.title}
+      </h2>
+
+      <div class='flex gap-2 mt-3'>
+        <span class='text-gray-400'>
+          {post.author}
+        </span>
+        <span class='text-gray-400'>• </span>
+        <time class='text-gray-400' datetime={post.publishDate.toISOString()}>
+          {getFormattedDate(post.publishDate)}
+        </time>
+      </div>
+    </div>
+  </article>
+</a>

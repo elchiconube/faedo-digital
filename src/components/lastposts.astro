@@ -1,0 +1,37 @@
+---
+import Link from '@components/ui/link.astro';
+import { getCollection } from 'astro:content';
+
+import Post from './ui/post.astro';
+
+let entries = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+entries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+
+entries = entries.slice(0, 3);
+---
+
+<section class='my-16'>
+  <h2 class='text-4xl lg:text-5xl font-bold lg:tracking-tight text-center'>
+    Últimas publicaciones en nuestro <span class='underlined'>blog</span>
+  </h2>
+  <p class='text-lg mt-4 text-slate-600 max-w-xl text-center mx-auto'>
+    Descubre como puedes mejorar tu presencia online y aumentar tus ventas con
+    nuestros consejos y guías. En nuestras publicaciones puedes encontrar
+    información útil para tu negocio rural.
+  </p>
+
+  <ul class='grid gap-16 max-w-4xl mx-auto mt-8'>
+    {entries.map((p) => <Post post={p.data} slug={p.slug} />)}
+  </ul>
+
+  <p class='mt-12 text-center'>
+    <Link href='/blog' title='Ver todas nuestras publicaciones'
+      >Ver todas las publicaciones</Link
+    >
+  </p>
+</section>

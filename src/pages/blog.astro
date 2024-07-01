@@ -1,16 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
-import { Picture } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/container.astro';
 import Sectionhead from '@components/sectionhead.astro';
-import { getFormattedDate } from '@utils/all.js';
+import Post from '@components/ui/post.astro';
 
-const publishedBlogEntries = await getCollection('blog', ({ data }) => {
+const entries = await getCollection('blog', ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-publishedBlogEntries.sort(function (a, b) {
+entries.sort(function (a, b) {
   return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
 });
 ---
@@ -28,43 +27,9 @@ publishedBlogEntries.sort(function (a, b) {
     <main class='mt-16'>
       <ul class='grid gap-16 max-w-4xl mx-auto'>
         {
-          publishedBlogEntries.map((blogPostEntry, index) => (
+          entries.map((p) => (
             <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
-                <article class='grid md:grid-cols-2 gap-5 md:gap-10 items-center '>
-                  <Picture
-                    src={blogPostEntry.data.image.src}
-                    alt={blogPostEntry.data.image.alt}
-                    sizes='(max-width: 800px) 100vw, 800px'
-                    width={800}
-                    height={600}
-                    loading={index <= 2 ? 'eager' : 'lazy'}
-                    decoding={index <= 2 ? 'sync' : 'async'}
-                    class='w-full rounded-md object-cover object-center bg-white shadow-lg'
-                  />
-                  <div>
-                    <span class='text-emerald-400 uppercase tracking-wider text-sm font-medium'>
-                      {blogPostEntry.data.category}
-                    </span>
-
-                    <h2 class='text-3xl font-semibold leading-snug tracking-tight mt-1 '>
-                      {blogPostEntry.data.title}
-                    </h2>
-
-                    <div class='flex gap-2 mt-3'>
-                      <span class='text-gray-400'>
-                        {blogPostEntry.data.author}
-                      </span>
-                      <span class='text-gray-400'>• </span>
-                      <time
-                        class='text-gray-400'
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {getFormattedDate(blogPostEntry.data.publishDate)}
-                      </time>
-                    </div>
-                  </div>
-                </article>
-              </a>
+              <Post post={p.data} slug={p.slug} />
             </li>
           ))
         }
