@@ -6,6 +6,7 @@ import LastPosts from '@components/lastposts.astro';
 import Hero from '@components/hero.astro';
 import Logos from '@components/logos.astro';
 import Layout from '@layouts/Layout.astro';
+import Mug from '@components/mug.jsx';
 ---
 
 <Layout title='' description=''>
@@ -15,5 +16,6 @@ import Layout from '@layouts/Layout.astro';
     <LastPosts />
     <Logos />
     <Cta />
+    <Mug client:only='react' />
   </Container>
 </Layout>
