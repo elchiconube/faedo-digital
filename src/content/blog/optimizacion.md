@@ -1,10 +1,10 @@
 ---
 draft: false
-title: "Optimización de la Página de Inicio para Negocios Rurales: Lecciones del Estudio SaaS 2024"
+title: "Optimización de la página principal para Negocios Rurales"
 snippet: "Aprende a optimizar la página de inicio de tu negocio rural con las mejores prácticas del estudio SaaS 2024, mejorando la atracción y conversión de visitantes."
 image:
   {
-    src: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=450&h=240&auto=format&fit=crop",
     alt: "Optimización de página de inicio",
   }
 publishDate: "2024-07-02"
