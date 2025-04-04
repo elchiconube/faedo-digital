@@ -4,7 +4,7 @@ title: "Uso de Elementos de Confianza para Aumentar la Credibilidad de tu Negoci
 snippet: "Descubre cómo los elementos de confianza pueden mejorar la credibilidad de tu negocio rural y atraer a más clientes."
 image:
   {
-    src: "https://images.unsplash.com/photo-1512499617640-c2f999018b72?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1630660664869-c9d3cc676880?&fit=crop&w=430&h=240",
     alt: "Elementos de confianza",
   }
 publishDate: "2024-07-30"

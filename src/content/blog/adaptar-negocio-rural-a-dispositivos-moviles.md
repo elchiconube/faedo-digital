@@ -4,7 +4,7 @@ title: "Adaptando tu Negocio Rural a Dispositivos Móviles: Lecciones del Estudi
 snippet: "Descubre cómo optimizar tu sitio web para dispositivos móviles puede mejorar la experiencia del usuario y aumentar las conversiones."
 image:
   {
-    src: "https://images.unsplash.com/photo-1512499617640-c2f999018b72?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1598257006458-087169a1f08d?&fit=crop&w=430&h=240",
     alt: "Adaptación móvil",
   }
 publishDate: "2024-08-27"

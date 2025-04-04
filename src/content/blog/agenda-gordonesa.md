@@ -4,7 +4,7 @@ title: "Agenda Gordonesa: Toda la actividad cultural en tu bolsillo"
 snippet: "Mantente al día con todos los eventos y actividades culturales de La Pola de Gordón y alrededores a través de nuestro nuevo canal de difusión en WhatsApp"
 image:
   {
-    src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?&fit=crop&w=430&h=240",
+    src: "https://images.unsplash.com/photo-1661862649743-2799867c32b0?&fit=crop&w=430&h=240",
     alt: "Teléfono móvil con WhatsApp",
   }
 publishDate: "2025-04-03"
