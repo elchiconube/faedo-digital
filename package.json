@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.5",
-    "@astrojs/node": "^9.3.0",
+    "@astrojs/node": "^9.4.6",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
     "@fontsource-variable/bricolage-grotesque": "^5.2.10",
