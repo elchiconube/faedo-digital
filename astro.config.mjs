@@ -9,11 +9,4 @@ import icon from "astro-icon";
 export default defineConfig({
   site: "https://faedodigital.com",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
-  output: "server",
-  adapter: node({
-    mode: "standalone"
-  }),
-  server: {
-    host: '0.0.0.0'
-  }
 });
