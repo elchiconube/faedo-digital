@@ -1,9 +1,11 @@
 ---
-import { SEO } from 'astro-seo';
-import Footer from '@components/footer.astro';
-import Header from '@components/header.astro';
-import '@fontsource-variable/inter/index.css';
-import '@fontsource-variable/bricolage-grotesque';
+import { SEO } from "astro-seo";
+import { ClientRouter } from "astro:transitions";
+import Footer from "@components/footer.astro";
+import Header from "@components/header.astro";
+import "@fontsource-variable/inter/index.css";
+import "@fontsource-variable/bricolage-grotesque";
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -13,30 +15,30 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  '/opengraph.jpg',
-  Astro.site
+  "/opengraph.jpg",
+  Astro.site,
 ).toString();
 
 const { title, description } = Astro.props;
 
 const makeTitle = title
-  ? title + ' | ' + 'Faedo Digital'
-  : 'Faedo Digital | Soluciones Digitales para el Entorno Rural';
+  ? title + " | " + "Faedo Digital"
+  : "Faedo Digital | Soluciones Digitales para el Entorno Rural";
 ---
 
 <!doctype html>
-<html lang='es'>
+<html lang="es">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     {
       import.meta.env.PROD && (
         <script
           defer
-          src='https://cloud.umami.is/script.js'
-          data-website-id='926d498a-3c35-4aad-9fb0-266e646c4e41'
+          src="https://cloud.umami.is/script.js"
+          data-website-id="926d498a-3c35-4aad-9fb0-266e646c4e41"
         />
       )
     }
@@ -44,25 +46,26 @@ const makeTitle = title
     <SEO
       title={makeTitle}
       description={description ||
-        'Faedo Digital, es una empresa de soluciones digitales especializada en ayudar a negocios rurales. Ofrecemos servicios de creación de páginas web, gestión de redes sociales, sistemas de reservas y más.'}
+        "Faedo Digital, es una empresa de soluciones digitales especializada en ayudar a negocios rurales. Ofrecemos servicios de creación de páginas web, gestión de redes sociales, sistemas de reservas y más."}
       canonical={canonicalURL}
       twitter={{
-        creator: '@elchiconube',
-        site: '@faedodigital',
-        card: 'summary_large_image',
+        creator: "@elchiconube",
+        site: "@faedodigital",
+        card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: 'website',
+          type: "website",
           title: `Faedo Digital - Soluciones Digitales para el Entorno Rural`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: 'Faedo Digital Homepage Screenshot',
+          alt: "Faedo Digital Homepage Screenshot",
         },
       }}
     />
+    <ClientRouter />
   </head>
   <body>
     <Header />
