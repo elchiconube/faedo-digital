@@ -1,75 +1,75 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Servicio from '@components/ui/servicio.astro';
-import Container from '@components/container.astro';
-import Sectionhead from '@components/sectionhead.astro';
-import Cta from '@components/cta.astro';
+import Layout from "@layouts/Layout.astro";
+import Servicio from "@components/ui/servicio.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Cta from "@components/cta.astro";
 ---
 
 <Layout
-  title='Servicios'
-  description='Explora los servicios de Faedo Digital: creación de páginas web, gestión de redes sociales, sistemas de reservas, tiendas online y posicionamiento en buscadores. Soluciones digitales a medida para negocios rurales.'>
+  title="Servicios"
+  description="Explora los servicios de Faedo Digital: creación de páginas web, gestión de redes sociales, sistemas de reservas, tiendas online y posicionamiento en buscadores. Soluciones digitales a medida para negocios rurales.">
   <Container>
     <Sectionhead>
-      <Fragment slot='title'>Servicios</Fragment>
-      <Fragment slot='desc'>Nos ajustamos a tus necesidades</Fragment>
+      <Fragment slot="title">Servicios</Fragment>
+      <Fragment slot="desc">Nos ajustamos a tus necesidades</Fragment>
     </Sectionhead>
 
-    <div class='flex flex-col gap-3 mx-auto max-w-4xl mt-16'>
-      <h2 class='font-bold text-3xl text-gray-800'>
-        Ofrecemos soluciones a tus <span class='underlined'>necesidades</span>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Ofrecemos soluciones a tus <span class="underlined">necesidades</span>
       </h2>
-      <p class='text-lg leading-relaxed text-slate-500'>
-        En <strong>Faedo Digital</strong> ofrecemos una amplia gama de servicios
-        para ayudarte a alcanzar tus objetivos. Siempre adaptándonos a tus necesidades
+      <p class="text-lg leading-relaxed text-slate-500">
+        En <strong>Faedo Digital</strong> ofrecemos una amplia gama de servicios para
+        ayudarte a alcanzar tus objetivos. Siempre adaptándonos a tus necesidades
         y presupuesto.
       </p>
 
-      <div class='grid md:grid-cols-2 mt-16'>
-        <div class='grid place-items-center'>
-          <img src='/pagina-web.png' alt='Página web' class='w-64 h-64' />
+      <div class="grid md:grid-cols-2 mt-16">
+        <div class="grid place-items-center">
+          <img src="/pagina-web.webp" alt="Página web" class="w-64 h-64" />
         </div>
         <Servicio
-          title='Páginas web a medida'
-          description='Creamos páginas web de calidad y fáciles de utilizar. Tus clientes podrán conocer tus productos y servicios de forma rápida y sencilla desde cualquier dispositivo. Nos encargamos de todo el proceso, desde el diseño hasta la publicación y alojamiento de la web.'
+          title="Páginas web a medida"
+          description="Creamos páginas web de calidad y fáciles de utilizar. Tus clientes podrán conocer tus productos y servicios de forma rápida y sencilla desde cualquier dispositivo. Nos encargamos de todo el proceso, desde el diseño hasta la publicación y alojamiento de la web."
         />
       </div>
 
-      <div class='grid md:grid-cols-2 mt-16'>
+      <div class="grid md:grid-cols-2 mt-16">
         <Servicio
-          title='Gestión de reservas'
-          description='Creamos sistemas de reservas online para que tus clientes puedan reservar tus servicios de forma rápida y sencilla. Podrás gestionar tus reservas de forma fácil y eficiente. Nos ocupamos de todo el proceso, desde el diseño hasta la puesta en marcha.'
+          title="Gestión de reservas"
+          description="Creamos sistemas de reservas online para que tus clientes puedan reservar tus servicios de forma rápida y sencilla. Podrás gestionar tus reservas de forma fácil y eficiente. Nos ocupamos de todo el proceso, desde el diseño hasta la puesta en marcha."
         />
-        <div class='grid place-items-center'>
+        <div class="grid place-items-center">
           <img
-            src='/sistema-reservas.png'
-            alt='Imagen página web'
-            class='w-64 h-64'
+            src="/sistema-reservas.webp"
+            alt="Imagen página web"
+            class="w-64 h-64"
           />
         </div>
       </div>
 
-      <div class='grid md:grid-cols-2 mt-16'>
-        <div class='grid place-items-center'>
+      <div class="grid md:grid-cols-2 mt-16">
+        <div class="grid place-items-center">
           <img
-            src='/tienda-online.png'
-            alt='Imagen de tienda online'
-            class='w-64 h-64'
+            src="/tienda-online.webp"
+            alt="Imagen de tienda online"
+            class="w-64 h-64"
           />
         </div>
         <Servicio
-          title='Tienda online'
-          description='Creamos tiendas online personalizadas,  permitiéndote comercializar tus productos de manera efectiva y accesible. Tus clientes disfrutarán de un proceso de compra seguro y fluido.'
+          title="Tienda online"
+          description="Creamos tiendas online personalizadas,  permitiéndote comercializar tus productos de manera efectiva y accesible. Tus clientes disfrutarán de un proceso de compra seguro y fluido."
         />
       </div>
 
-      <div class='grid md:grid-cols-2 mt-16'>
+      <div class="grid md:grid-cols-2 mt-16">
         <Servicio
-          title='Posicionamiento en buscadores'
-          description='Mejoramos el rendimiento de tu página web para posicionarla entre los primeros resultados en los motores de búsqueda. Esto incrementará la visibilidad de tu empresa y captará más clientes interesados.'
+          title="Posicionamiento en buscadores"
+          description="Mejoramos el rendimiento de tu página web para posicionarla entre los primeros resultados en los motores de búsqueda. Esto incrementará la visibilidad de tu empresa y captará más clientes interesados."
         />
-        <div class='grid place-items-center'>
-          <img src='/seo.png' alt='Página web' class='w-64 h-64' />
+        <div class="grid place-items-center">
+          <img src="/seo.webp" alt="Página web" class="w-64 h-64" />
         </div>
       </div>
     </div>
