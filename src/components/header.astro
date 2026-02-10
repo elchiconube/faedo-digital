@@ -1,61 +1,65 @@
 ---
-import Container from '@components/container.astro';
-import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
+import Container from "@components/container.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: 'Inicio',
-    path: '/',
+    title: "Inicio",
+    path: "/",
   },
   {
-    title: 'Sobre Nosotros',
-    path: '/sobre-nosotros',
+    title: "Sobre Nosotros",
+    path: "/sobre-nosotros",
   },
   {
-    title: 'Servicios',
-    path: '/servicios',
+    title: "Servicios",
+    path: "/servicios",
   },
   {
-    title: 'Proyectos',
-    path: '/proyectos',
+    title: "Proyectos",
+    path: "/proyectos",
   },
   {
-    title: 'Blog',
-    path: '/blog',
+    title: "Blog",
+    path: "/blog",
   },
   {
-    title: 'Contacto',
-    path: '/contacto',
+    title: "Contacto",
+    path: "/contacto",
+  },
+  {
+    title: "Tienda",
+    path: "/tienda",
   },
 ];
 ---
 
 <Container>
-  <header class='flex flex-col lg:flex-row justify-between items-center my-5'>
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
-      <div class='flex w-full lg:w-auto items-center justify-between'>
-        <a href='/' class='text-lg flex gap-3 items-center'>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-lg flex gap-3 items-center">
           <img
-            src={'/faedo-digital-logo.svg'}
-            width='32'
-            alt='Logo Faedo Digital'
+            src={"/faedo-digital-logo.svg"}
+            width="32"
+            alt="Logo Faedo Digital"
           />
-          <span class='font-bold text-slate-800'
-            >Faedo <span class='text-slate-500 font-normal'>Digital</span></span
+          <span class="font-bold text-slate-800"
+            >Faedo <span class="text-slate-500 font-normal">Digital</span></span
           >
         </a>
-        <div class='block lg:hidden'>
-          <MenuIcon class='w-4 h-4 text-gray-800' />
+        <div class="block lg:hidden">
+          <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
       </div>
-      <MenuItems class='hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0'>
-        <ul class='flex flex-col lg:flex-row lg:gap-3'>
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item) => (
               <li>
                 <a
                   href={item.path}
-                  class='flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900'>
+                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
                   <span> {item.title}</span>
                 </a>
               </li>

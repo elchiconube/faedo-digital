@@ -1,90 +1,103 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Container from "@components/container.astro";
+import FeatureItem from "@components/ui/FeatureItem.astro";
+import ServiceCard from "@components/ui/ServiceCard.astro";
 ---
 
-<Layout title='Tienda' description='Compra nuestro merchan a un precio único'>
-  <div class='grid sm:grid-cols-3 gap-10 mx-auto mt-24 max-w-5xl'>
-    <div
-      class='ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-674966498 rounded-xl p-8 bg-gray-50 border-2 border-slate-200 h-full'
-      itemscope
-      itemtype='http://schema.org/Product'
-      data-single-product-id='674966498'>
-      <div itemprop='image'></div><div
-        class='ecsp-title'
-        itemprop='name'
-        content='Camiseta Unisex'>
-      </div><div itemtype='http://schema.org/Offer' itemscope itemprop='offers'>
-        <div
-          class='ecsp-productBrowser-price ecsp-price'
-          itemprop='price'
-          content='7.5'
-          data-spw-price-location='button'>
-          <div itemprop='priceCurrency' content='EUR'></div>
-        </div>
-      </div><div customprop='options'></div><div customprop='qty'></div><div
-        customprop='addtobag'>
-      </div><div customprop='vatinprice'></div>
-    </div><script
-      data-cfasync='false'
-      type='text/javascript'
-      src='https://app.ecwid.com/script.js?105651587&data_platform=singleproduct_v2'
-      charset='utf-8'></script><script type='text/javascript'>
-      xProduct();
-    </script>
-    <div
-      class='ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-674820698 rounded-xl p-8 bg-gray-50 border-2 border-slate-200 h-full'
-      itemscope
-      itemtype='http://schema.org/Product'
-      data-single-product-id='674820698'>
-      <div itemprop='image'></div><div
-        class='ecsp-title'
-        itemprop='name'
-        content='Bloc de notas'>
-      </div><div itemtype='http://schema.org/Offer' itemscope itemprop='offers'>
-        <div
-          class='ecsp-productBrowser-price ecsp-price'
-          itemprop='price'
-          content='16.99'
-          data-spw-price-location='button'>
-          <div itemprop='priceCurrency' content='EUR'></div>
-        </div>
-      </div><div customprop='options'></div><div customprop='qty'></div><div
-        customprop='addtobag'>
-      </div><div customprop='vatinprice'></div>
-    </div><script
-      data-cfasync='false'
-      type='text/javascript'
-      src='https://app.ecwid.com/script.js?105651587&data_platform=singleproduct_v2'
-      charset='utf-8'></script><script type='text/javascript'>
-      xProduct();
-    </script>
+<Layout
+  title="Tienda"
+  description="Contrata nuestros servicios y conviértete en un negocio digital">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Tienda</Fragment>
+      <Fragment slot="desc">
+        Contrata nuestros servicios y conviértete en un negocio digital
+      </Fragment>
+    </Sectionhead>
 
-    <div
-      class='ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-674839287 rounded-xl p-8 bg-gray-50 border-2 border-slate-200 h-full'
-      itemscope
-      itemtype='http://schema.org/Product'
-      data-single-product-id='674839287'>
-      <div itemprop='image'></div><div
-        class='ecsp-title'
-        itemprop='name'
-        content='Taza blanca brillante'>
-      </div><div itemtype='http://schema.org/Offer' itemscope itemprop='offers'>
-        <div
-          class='ecsp-productBrowser-price ecsp-price'
-          itemprop='price'
-          content='8.99'
-          data-spw-price-location='button'>
-          <div itemprop='priceCurrency' content='EUR'></div>
-        </div>
-      </div><div customprop='options'></div><div customprop='qty'></div><div
-        customprop='addtobag'>
-      </div><div customprop='vatinprice'></div>
-    </div><script
-      data-cfasync='false'
-      type='text/javascript'
-      src='https://app.ecwid.com/script.js?105651587&data_platform=singleproduct_v2'
-      charset='utf-8'></script><script type='text/javascript'>
-      xProduct();
-    </script>
-  </div>
+    <div class="grid md:grid-cols-2 gap-10 mt-12 mb-24 max-w-5xl mx-auto">
+      <ServiceCard
+        title="Plan Mantenimiento Web"
+        description="Diseñado para que te olvides de los problemas técnicos y te enfoques solo en vender. Nos encargamos de que tu web esté siempre online, segura y actualizada."
+        ctaType="stripe"
+        stripeId="buy_btn_1SzNlUQ3CNsbljrfb6oHXWqI"
+        stripeKey="pk_live_51SzMkYQ3CNsbljrfKnzfAJ0Nzu6pNwRUhrTTzC1bG3KSCwqVLBNdeCQOhCzWx0vF9dGgOYd14Hfd036vYhtUHYJO005H6qmdkH">
+        <Fragment slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </Fragment>
+        <FeatureItem>
+          <strong>Actualización semanal:</strong> Core, paquetes y plugins para máxima
+          velocidad y seguridad.
+        </FeatureItem>
+        <FeatureItem>
+          <strong>Seguridad Total:</strong> Vigilancia contra ataques y malware.
+        </FeatureItem>
+        <FeatureItem>
+          <strong>Panel de Visitas:</strong> Dashboard intuitivo personalizado para
+          entender tu tráfico sin complicaciones.
+        </FeatureItem>
+        <FeatureItem>
+          <strong>Soporte Prioritario:</strong> Respuesta preferente ante dudas o
+          incidencias por email o WhatsApp.
+        </FeatureItem>
+      </ServiceCard>
+
+      <ServiceCard
+        title="Crea tu sitio Web"
+        description="Lleva tu negocio al siguiente nivel con una web profesional, rápida y optimizada para convertir visitas en clientes."
+        ctaType="link"
+        linkHref="https://wa.me/34649131791?text=Hola!%20Me%20gustaría%20crear%20un%20sitio%20web%20con%20vosotros."
+        ctaText="Escríbenos">
+        <Fragment slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </Fragment>
+        <FeatureItem>
+          <strong>Diseño a medida:</strong> Único y adaptado a tu marca.
+        </FeatureItem>
+        <FeatureItem>
+          <strong>Optimización SEO:</strong> Prepárate para aparecer en Google desde
+          el primer día.
+        </FeatureItem>
+        <FeatureItem>
+          <strong>100% Responsivo:</strong> Se verá perfecto en móviles, tablets y
+          ordenadores.
+        </FeatureItem>
+        <FeatureItem>
+          <strong>Alta velocidad:</strong> Webs ultra rápidas para mejorar la experiencia
+          de usuario.
+        </FeatureItem>
+      </ServiceCard>
+    </div>
+  </Container>
 </Layout>
